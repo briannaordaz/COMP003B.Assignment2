@@ -1,0 +1,15 @@
+
+@{
+    ViewData["Title"] = "Current";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>@ViewData["Title"]</h2>
+<p>Current Projects</p>
+<ul>
+    <li>ENG-001 class- Argumentative Essay</li>
+    <li>COMP-003B class- Coding Assignment: MVC</li>
+</ul>
+
+@await Html.PartialAsync("_Navigation")

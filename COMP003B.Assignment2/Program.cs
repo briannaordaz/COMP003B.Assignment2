@@ -4,6 +4,9 @@
  * Faculty: Jonathan Cruz
  * Purpose: To build a modular and structured ASP.NET Core MVC web application
  */
+
+using COMP003B.Assignment2.Middleware;
+
 namespace COMP003B.Assignment2;
 
 public class Program
@@ -24,9 +27,19 @@ public class Program
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
-
+    
+        //Middleware 
+        
         app.UseHttpsRedirection();
+        
         app.UseStaticFiles();
+        
+        //registered middleware for RequestTrackerMiddleware
+        app.UseMiddleware<COMP003B.Assignment2.Middleware.RequestTrackerMiddleware>();
+            
+        //added welcome page middleware
+        app.UseWelcomePage("/welcome");
+
 
         app.UseRouting();
 

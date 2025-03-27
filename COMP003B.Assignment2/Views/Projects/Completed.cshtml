@@ -1,0 +1,16 @@
+
+@{
+    ViewData["Title"] = "Completed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>@ViewData["Title"]</h2>
+<p>Completed Academic Projects</p>
+<ul>
+    <li>ENG-001 class- Journal Essay</li>
+    <li>COMP003A class- C# final project</li>
+    <li>COMPUTER CONCEPTS class- PowerPoint project</li>
+</ul>
+
+@await Html.PartialAsync("_Navigation")
